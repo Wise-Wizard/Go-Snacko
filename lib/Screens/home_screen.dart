@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:cashfree_pg/cashfree_pg.dart';
-import 'package:flutter_application_7/transaction.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_application_7/Transaction/transaction.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,9 +23,21 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Container(
           margin: const EdgeInsets.all(30),
-          child: TextField(),
+          child: TextField(
+            controller: amountController,
+            decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+                prefixIcon: Icon(Icons.currency_rupee_outlined),
+                hintText: 'Enter Amount in Rupees'),
+            inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+          ),
         ),
-        ElevatedButton(onPressed: doTransaction, child: Text('Pay'))
+        ElevatedButton(
+            onPressed: () {
+              doTransaction(amountController.text.trim(), context);
+            },
+            child: Text('Pay'))
       ]),
     );
   }
