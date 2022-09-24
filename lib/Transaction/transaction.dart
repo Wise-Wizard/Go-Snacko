@@ -9,7 +9,13 @@ void doTransaction(var amountController, BuildContext context) {
   if (amount == '') {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text("Invalid Amount"),
+        backgroundColor: Color(0xFF31C6D4),
+        content: Text(
+          "Invalid Amount",
+          style: TextStyle(
+              color: Colors.black87, fontSize: 30, fontFamily: 'EBGaramond'),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
     return;
@@ -47,13 +53,29 @@ void doTransaction(var amountController, BuildContext context) {
           if (value['txStatus'] == 'SUCCESS') {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text('Payment Succesful'),
+                backgroundColor: Color(0xFF31C6D4),
+                content: Text(
+                  "Payment Successful",
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 30,
+                      fontFamily: 'EBGaramond'),
+                  textAlign: TextAlign.center,
+                ),
               ),
             );
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text('Payment Failure'),
+                backgroundColor: Color(0xFF31C6D4),
+                content: Text(
+                  "Payment Unsuccessful",
+                  style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 30,
+                      fontFamily: 'EBGaramond'),
+                  textAlign: TextAlign.center,
+                ),
               ),
             );
           }

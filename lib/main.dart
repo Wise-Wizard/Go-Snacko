@@ -12,8 +12,8 @@ class CashApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      highContrastDarkTheme: ThemeData.dark(),
-      home: HomeScreen(),
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'EBGaramond'),
+      home: const HomeScreen(),
     );
   }
 }
