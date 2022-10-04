@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_7/Screens/home_screen.dart';
+import 'package:flutter_application_7/Screens/payment_screen.dart';
 
 void main() {
   runApp(const CashApp());
@@ -13,7 +13,7 @@ class CashApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark, fontFamily: 'EBGaramond'),
-      home: const HomeScreen(),
+      home: const PaymentScreen(),
     );
   }
 }

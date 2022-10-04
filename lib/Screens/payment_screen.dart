@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_7/Transaction/transaction.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class PaymentScreen extends StatefulWidget {
+  const PaymentScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<PaymentScreen> createState() => _PaymentScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _PaymentScreenState extends State<PaymentScreen> {
   final amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Container(
             margin: EdgeInsets.only(left: 35, right: 35),
-            child: Image(image: AssetImage('images/bank-1300155__340.webp')),
+            child: Image(
+                image: AssetImage('Payment_Images/bank-1300155__340.webp')),
           ),
           Container(
             margin:
@@ -81,13 +82,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              PayIcons(imageUrl: 'images/paypal.png'),
-              PayIcons(imageUrl: 'images/icons8-phone-pe-512.png'),
+              PayIcons(imageUrl: 'Payment_Images/paypal.png'),
+              PayIcons(imageUrl: 'Payment_Images/icons8-phone-pe-512.png'),
               PayIcons(
-                imageUrl: 'images/bank.png',
+                imageUrl: 'Payment_Images/bank.png',
               ),
               PayIcons(
-                imageUrl: 'images/wallet-filled-money-tool.png',
+                imageUrl: 'Payment_Images/wallet-filled-money-tool.png',
               ),
             ],
           )
