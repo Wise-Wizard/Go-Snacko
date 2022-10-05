@@ -62,7 +62,7 @@ class RecentOrders extends StatelessWidget {
               ),
               child: Icon(
                 Icons.add,
-                size: 35,
+                size: 40,
                 color: Color(0xFF31C6D4),
               ),
             )
@@ -92,6 +92,10 @@ class RecentOrders extends StatelessWidget {
               return _buildOrderHistory(context, order);
             },
           ),
+        ),
+        Text(
+          'Explore Restaurants',
+          style: TextStyle(color: Colors.black87, fontSize: 35),
         ),
       ],
     );
