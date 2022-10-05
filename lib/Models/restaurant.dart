@@ -1,4 +1,4 @@
-import 'food_screen.dart';
+import 'food.dart';
 
 class Restaurant {
   final String imageUrl;

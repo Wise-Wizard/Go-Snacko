@@ -1,9 +1,9 @@
-// Food
-import 'package:flutter_application_7/Screens/food_screen.dart';
-import 'package:flutter_application_7/Screens/order_screen.dart';
-import 'package:flutter_application_7/Screens/restaurant_screen.dart';
-import 'package:flutter_application_7/Screens/user_screen.dart';
+import 'package:flutter_application_7/Models/food.dart';
+import 'package:flutter_application_7/Models/order.dart';
+import 'package:flutter_application_7/Models/restaurant.dart';
+import 'package:flutter_application_7/Models/user.dart';
 
+//Food
 final _burrito =
     Food(imageUrl: 'assets/images/burrito.jpg', name: 'Burrito', price: 8.99);
 final _steak =

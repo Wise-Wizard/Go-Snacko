@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_application_7/Transaction/transaction.dart';
 
 class PaymentScreen extends StatefulWidget {
+  static String id = 'Payment Screen';
   const PaymentScreen({Key? key}) : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text(
-          'Cash Manager',
+          'Payment Screen',
           style: TextStyle(color: Colors.black87, fontSize: 40),
         ),
         centerTitle: true,

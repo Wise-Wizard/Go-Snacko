@@ -1,5 +1,5 @@
-import 'food_screen.dart';
-import 'restaurant_screen.dart';
+import 'food.dart';
+import 'restaurant.dart';
 
 class Order {
   final Restaurant restaurant;
